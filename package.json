@@ -1,0 +1,48 @@
+{
+  "name": "notenote",
+  "version": "1.0.0",
+  "description": "A easy to use/deploy notebook system.",
+  "main": "index.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production webpack",
+    "watch": "webpack --watch",
+    "lint": "eslint './app/**/*.ts{,x}'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TeamKitten/NoteNote.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TeamKitten/NoteNote/issues"
+  },
+  "homepage": "https://github.com/TeamKitten/NoteNote#readme",
+  "devDependencies": {
+    "@types/node": "^14.14.25",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "@typescript-eslint/eslint-plugin": "^4.14.2",
+    "@typescript-eslint/parser": "^4.14.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.0.1",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "html-webpack-plugin": "^5.0.0",
+    "prettier": "^2.2.1",
+    "ts-loader": "^8.0.14",
+    "typescript": "^4.1.3",
+    "webpack": "^5.20.1",
+    "webpack-cli": "^4.5.0"
+  },
+  "dependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-router-dom": "^5.2.0",
+    "style-loader": "^2.0.0"
+  }
+}

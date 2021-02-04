@@ -1,0 +1,25 @@
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "env": {
+    "node": true,
+    "browser": true,
+    "jest": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react"
+  ],
+  "plugins": ["react", "@typescript-eslint", "react-hooks"],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  }
+}
