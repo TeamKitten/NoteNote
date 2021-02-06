@@ -95,7 +95,7 @@ func distBundleJs() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "dist/bundle.js", size: 163306, mode: os.FileMode(420), modTime: time.Unix(1612598175, 0)}
+	info := bindataFileInfo{name: "dist/bundle.js", size: 163306, mode: os.FileMode(420), modTime: time.Unix(1612620569, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -115,7 +115,7 @@ func distBundleJsLicenseTxt() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "dist/bundle.js.LICENSE.txt", size: 1035, mode: os.FileMode(420), modTime: time.Unix(1612598175, 0)}
+	info := bindataFileInfo{name: "dist/bundle.js.LICENSE.txt", size: 1035, mode: os.FileMode(420), modTime: time.Unix(1612620569, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }
@@ -135,7 +135,7 @@ func distIndexHtml() (*asset, error) {
 		return nil, err
 	}
 
-	info := bindataFileInfo{name: "dist/index.html", size: 333, mode: os.FileMode(420), modTime: time.Unix(1612434159, 0)}
+	info := bindataFileInfo{name: "dist/index.html", size: 333, mode: os.FileMode(420), modTime: time.Unix(1612620569, 0)}
 	a := &asset{bytes: bytes, info: info}
 	return a, nil
 }

@@ -4,6 +4,7 @@ import (
 	"net/http"
 	"strings"
 
+	"github.com/TeamKitten/NoteNote/server/injector"
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"
@@ -35,8 +36,16 @@ func BinaryFileSystem(root string) *binaryFileSystem {
 	}
 }
 
-func main() {
+func startRouter() {
 	router := gin.Default()
 	router.Use(static.Serve("/", BinaryFileSystem("dist")))
+
+	api := router.Group("/api")
+	{
+		h := injector.InjectNoteHandler()
+		api.POST("/notes/:id", h.Set)
+		api.GET("/notes/:id", h.Get)
+	}
+
 	router.Run()
 }

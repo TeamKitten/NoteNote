@@ -34,6 +34,7 @@ RUN mkdir -p /opt/notenote
 WORKDIR /opt/notenote
 
 COPY --from=app /go/src/github.com/TeamKitten/NoteNote/NoteNote ./bin
+COPY --from=app /go/src/github.com/TeamKitten/NoteNote/.env .
 
 ENV GIN_MODE=release
 
