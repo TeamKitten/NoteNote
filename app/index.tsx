@@ -1,4 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import "./assets/styles/reset.css";
+import AppRouter from "./AppRouter";
 
-ReactDOM.render(<h1>Hello world!</h1>, document.getElementById("root"));
+ReactDOM.render(
+  <React.StrictMode>
+    <AppRouter />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
