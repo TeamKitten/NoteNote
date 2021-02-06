@@ -1,0 +1,9 @@
+backend:
+  - api/**
+
+frontend:
+  - app/**
+
+ci/cd:
+  - .github/*.yml
+  - .github/workflows/**/*

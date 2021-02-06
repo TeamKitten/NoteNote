@@ -1,0 +1,15 @@
+---
+name: 🐛 Bug Report
+labels: bug
+about: Create a bug report
+---
+
+### 🐛 Summary
+
+### Expected behavior
+
+### Screenshot
+
+### Version
+
+### Build Number
