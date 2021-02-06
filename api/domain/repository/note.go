@@ -1,6 +1,6 @@
 package repository
 
-import "github.com/TeamKitten/NoteNote/server/domain/model"
+import "github.com/TeamKitten/NoteNote/api/domain/model"
 
 type NoteRepository interface {
 	FindOne(id string) (note *model.Note, err error)

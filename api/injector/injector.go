@@ -1,10 +1,10 @@
 package injector
 
 import (
-	"github.com/TeamKitten/NoteNote/server/domain/repository"
-	"github.com/TeamKitten/NoteNote/server/handler"
-	"github.com/TeamKitten/NoteNote/server/infra"
-	"github.com/TeamKitten/NoteNote/server/usecase"
+	"github.com/TeamKitten/NoteNote/api/domain/repository"
+	"github.com/TeamKitten/NoteNote/api/handler"
+	"github.com/TeamKitten/NoteNote/api/infra"
+	"github.com/TeamKitten/NoteNote/api/usecase"
 )
 
 func InjectDB() infra.DBHandler {

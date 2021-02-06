@@ -3,8 +3,8 @@ package handler
 import (
 	"encoding/json"
 
-	"github.com/TeamKitten/NoteNote/server/domain/model"
-	"github.com/TeamKitten/NoteNote/server/usecase"
+	"github.com/TeamKitten/NoteNote/api/domain/model"
+	"github.com/TeamKitten/NoteNote/api/usecase"
 	"github.com/gin-gonic/gin"
 	"github.com/tidwall/buntdb"
 )

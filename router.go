@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"strings"
 
-	"github.com/TeamKitten/NoteNote/server/injector"
+	"github.com/TeamKitten/NoteNote/api/injector"
 	assetfs "github.com/elazarl/go-bindata-assetfs"
 	"github.com/gin-contrib/static"
 	"github.com/gin-gonic/gin"

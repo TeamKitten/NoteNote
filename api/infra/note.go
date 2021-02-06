@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"github.com/TeamKitten/NoteNote/server/domain/model"
-	"github.com/TeamKitten/NoteNote/server/domain/repository"
+	"github.com/TeamKitten/NoteNote/api/domain/model"
+	"github.com/TeamKitten/NoteNote/api/domain/repository"
 	"github.com/tidwall/buntdb"
 )
 
