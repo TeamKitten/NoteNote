@@ -10,11 +10,9 @@ COPY . .
 
 RUN npm run build
 
-FROM golang:1.15.8-alpine3.12
+FROM golang:1.15.8-alpine3.12 as app
 
 WORKDIR /go/src/github.com/TeamKitten/NoteNote
-
-ENV GIN_MODE=release
 
 COPY . .
 
@@ -27,12 +25,18 @@ RUN go get github.com/elazarl/go-bindata-assetfs/...
 RUN go-bindata-assetfs ./dist/...
 
 RUN go get -d -v ./...
-RUN go build
+RUN CGO_ENABLED=0 go build
 
-RUN apk add curl
+FROM busybox
 
-HEALTHCHECK CMD curl -s -S -o /dev/null http://$HOSTNAME:8080/ || exit 1
+RUN mkdir -p /opt/notenote
+
+WORKDIR /opt/notenote
+
+COPY --from=app /go/src/github.com/TeamKitten/NoteNote/NoteNote ./bin
+
+ENV GIN_MODE=release
 
 EXPOSE 8080
 
-CMD ["./NoteNote"]
+CMD ["/opt/notenote/bin"]
