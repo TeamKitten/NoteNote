@@ -1,0 +1,15 @@
+{
+  "serviceName": "notenote",
+  "containers": {
+    "app": {
+      "image": "teamkitten/notenote-dev:latest",
+      "ports": {
+        "8080": "HTTP"
+      }
+    }
+  },
+  "publicEndpoint": {
+    "containerName": "app",
+    "containerPort": 8080
+  }
+}

@@ -33,3 +33,11 @@ jobs:
           tags: teamkitten/notenote-dev:latest
       - name: Image digest
         run: echo ${{ steps.docker_build.outputs.digest }}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ap-northeast-1
+      - name: Deploy new container
+        run: aws lightsail create-container-service-deployment --cli-input-json file://.github/lightsail.json
