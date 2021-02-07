@@ -16,6 +16,7 @@ jobs:
     name: Push Docker image to GitHub Packages
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v1
       - name: Set up Docker Buildx
@@ -40,4 +41,4 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ap-northeast-1
       - name: Deploy new container
-        run: aws lightsail create-container-service-deployment --cli-input-json file://./.github/lightsail.json
+        run: aws lightsail create-container-service-deployment --cli-input-json file://${GITHUB_WORKSPACE}/.github/lightsail.json
